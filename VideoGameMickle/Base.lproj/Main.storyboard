@@ -16,8 +16,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="852" height="393"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VlJ-Kx-fkR">
+                                <rect key="frame" x="52" y="315" width="113" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="arrowshape.backward.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="leftAction:" destination="BV1-FR-VrT" eventType="touchDownRepeat" id="iYh-vd-DPe"/>
+                                    <action selector="leftActionEnd:" destination="BV1-FR-VrT" eventType="touchUpInside" id="RfH-ER-Nyv"/>
+                                    <action selector="leftActionEndOutside:" destination="BV1-FR-VrT" eventType="touchUpOutside" id="UlS-qS-crb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0c2-By-ix3">
+                                <rect key="frame" x="188" y="315" width="110" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" image="arrowshape.right.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="rightAction:" destination="BV1-FR-VrT" eventType="touchDownRepeat" id="NTE-5N-qfp"/>
+                                    <action selector="rightActionEnd:" destination="BV1-FR-VrT" eventType="touchUpInside" id="1UH-n9-A8E"/>
+                                    <action selector="rightActionEndOutside:" destination="BV1-FR-VrT" eventType="touchUpOutside" id="ROv-kh-3gc"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YBi-ge-qzQ">
-                                <rect key="frame" x="660" y="305" width="157" height="67"/>
+                                <rect key="frame" x="644" y="315" width="181" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Jump"/>
@@ -36,6 +58,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.backward.fill" catalog="system" width="128" height="104"/>
+        <image name="arrowshape.right.fill" catalog="system" width="128" height="104"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -9,13 +9,23 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
+class AppData{
+    
+    static var canJump = false
+    
+}
+
 class GameViewController: UIViewController {
 
     
     var play: GameScene!
     
     @IBAction func jumpAction(_ sender: UIButton) {
-        play.player.physicsBody?.velocity.dy = 1000
+        if AppData.canJump{
+            play.player.physicsBody?.velocity.dy = 1100
+            AppData.canJump = false
+        }
+        
     }
     
     
@@ -50,4 +60,36 @@ class GameViewController: UIViewController {
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
+    
+    @IBAction func leftAction(_ sender: UIButton) {
+        play.player.physicsBody?.velocity.dx = -1000
+    }
+    
+    
+    @IBAction func leftActionEnd(_ sender: UIButton) {
+        play.player.physicsBody?.velocity.dx = 0
+    }
+    
+    
+    @IBAction func rightAction(_ sender: UIButton) {
+        play.player.physicsBody?.velocity.dx = 1000
+    }
+    
+    
+    @IBAction func rightActionEnd(_ sender: UIButton) {
+        play.player.physicsBody?.velocity.dx = 0
+    }
+    
+    @IBAction func leftActionEndOutside(_ sender: UIButton) {
+        play.player.physicsBody?.velocity.dx = 0
+    }
+    
+    
+    @IBAction func rightActionEndOutside(_ sender: UIButton) {
+        play.player.physicsBody?.velocity.dx = 0
+    }
+    
+    
+    
 }
