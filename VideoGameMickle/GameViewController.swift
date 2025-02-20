@@ -12,6 +12,7 @@ import GameplayKit
 class AppData{
     
     static var canJump = false
+    static var gameView: GameViewController!
     
 }
 
@@ -19,6 +20,9 @@ class GameViewController: UIViewController {
 
     
     var play: GameScene!
+    
+    
+    @IBOutlet weak var labelOutlet: UILabel!
     
     @IBAction func jumpAction(_ sender: UIButton) {
         if AppData.canJump{
@@ -31,6 +35,8 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        AppData.gameView = self
         
         let value = UIInterfaceOrientation.landscapeLeft.rawValue
                     UIDevice.current.setValue(value, forKey: "orientation")
